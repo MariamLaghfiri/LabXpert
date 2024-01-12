@@ -22,4 +22,24 @@ public class Test {
     private Resultat resultat;
     @OneToMany(mappedBy = "test")
     private List<TestReactif> testReactifs;
+
+    @Override
+    public String toString() {
+        return "Test{" +
+                "echantillon=" + echantillon +
+                ", testPre=" + testPre +
+                ", analyse=" + analyse +
+                ", resultat=" + resultat +
+                ", testReactifs=" + testReactifs +
+                '}';
+    }
+
+    public Test(Echantillon echantillon, TestPre testPre, Analyse analyse, Resultat resultat, List<TestReactif> testReactifs) {
+        this.echantillon = echantillon;
+        this.testPre = testPre;
+        this.analyse = analyse;
+        this.resultat = resultat;
+        this.testReactifs = testReactifs;
+    }
+
 }

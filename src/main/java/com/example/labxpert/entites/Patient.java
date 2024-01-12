@@ -28,4 +28,29 @@ public class Patient {
     private List<Analyse> historique_analyses;
     @OneToMany(mappedBy = "patient")
     private List<Echantillon> echantillons;
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", date_naissance=" + date_naissance +
+                ", sexe=" + sexe +
+                ", telephone='" + telephone + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", historique_analyses=" + historique_analyses +
+                ", echantillons=" + echantillons +
+                '}';
+    }
+
+    public Patient(String nom, String prenom, Date date_naissance, Sexe sexe, String telephone, String adresse, List<Analyse> historique_analyses, List<Echantillon> echantillons) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.date_naissance = date_naissance;
+        this.sexe = sexe;
+        this.telephone = telephone;
+        this.adresse = adresse;
+        this.historique_analyses = historique_analyses;
+        this.echantillons = echantillons;
+    }
 }

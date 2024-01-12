@@ -19,4 +19,23 @@ public class TestPre {
     private AnalysePre analysePre;
     @OneToMany(mappedBy = "testPre")
     private List<Test> test;
+
+    @Override
+    public String toString() {
+        return "TestPre{" +
+                "nom='" + nom + '\'' +
+                ", min_valeur=" + min_valeur +
+                ", max_valeur=" + max_valeur +
+                ", analysePre=" + analysePre +
+                ", test=" + test +
+                '}';
+    }
+
+    public TestPre(String nom, Double min_valeur, Double max_valeur, AnalysePre analysePre, List<Test> test) {
+        this.nom = nom;
+        this.min_valeur = min_valeur;
+        this.max_valeur = max_valeur;
+        this.analysePre = analysePre;
+        this.test = test;
+    }
 }

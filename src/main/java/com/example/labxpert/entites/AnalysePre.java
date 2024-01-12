@@ -19,4 +19,21 @@ public class AnalysePre {
     private List<Analyse> analyse;
     @OneToMany(mappedBy = "analysePre")
     private List<TestPre> testPre;
+
+    @Override
+    public String toString() {
+        return "AnalysePre{" +
+                "nom='" + nom + '\'' +
+                ", branche=" + branche +
+                ", analyse=" + analyse +
+                ", testPre=" + testPre +
+                '}';
+    }
+
+    public AnalysePre(String nom, Branches branche, List<Analyse> analyse, List<TestPre> testPre) {
+        this.nom = nom;
+        this.branche = branche;
+        this.analyse = analyse;
+        this.testPre = testPre;
+    }
 }

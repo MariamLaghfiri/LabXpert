@@ -24,4 +24,27 @@ public class Analyse {
     private AnalysePre analysePre;
     @OneToMany(mappedBy = "analyse")
     private List<Test> test;
+
+    @Override
+    public String toString() {
+        return "Analyse{" +
+                "date_debut_analyse=" + date_debut_analyse +
+                ", date_fin_analyse=" + date_fin_analyse +
+                ", commentaires='" + commentaires + '\'' +
+                ", utilisateur=" + utilisateur +
+                ", patient=" + patient +
+                ", analysePre=" + analysePre +
+                ", test=" + test +
+                '}';
+    }
+
+    public Analyse(LocalDateTime date_debut_analyse, LocalDateTime date_fin_analyse, String commentaires, Utilisateur utilisateur, Patient patient, AnalysePre analysePre, List<Test> test) {
+        this.date_debut_analyse = date_debut_analyse;
+        this.date_fin_analyse = date_fin_analyse;
+        this.commentaires = commentaires;
+        this.utilisateur = utilisateur;
+        this.patient = patient;
+        this.analysePre = analysePre;
+        this.test = test;
+    }
 }

@@ -21,4 +21,25 @@ public class Reactif {
     private String fournisseur;
     @OneToMany(mappedBy = "reactif")
     private List<TestReactif> testReactif;
+
+    @Override
+    public String toString() {
+        return "Reactif{" +
+                "nom='" + nom + '\'' +
+                ", description='" + description + '\'' +
+                ", quantite_en_stock=" + quantite_en_stock +
+                ", date_expiration=" + date_expiration +
+                ", fournisseur='" + fournisseur + '\'' +
+                ", testReactif=" + testReactif +
+                '}';
+    }
+
+    public Reactif(String nom, String description, Double quantite_en_stock, Date date_expiration, String fournisseur, List<TestReactif> testReactif) {
+        this.nom = nom;
+        this.description = description;
+        this.quantite_en_stock = quantite_en_stock;
+        this.date_expiration = date_expiration;
+        this.fournisseur = fournisseur;
+        this.testReactif = testReactif;
+    }
 }

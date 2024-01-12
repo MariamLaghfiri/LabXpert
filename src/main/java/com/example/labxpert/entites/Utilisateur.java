@@ -25,4 +25,25 @@ public class Utilisateur {
     private String adresse;
     @OneToMany(mappedBy = "utilisateur")
     private List<Analyse> analyses;
+
+    @Override
+    public String toString() {
+        return "Utilisateur{" +
+                "nom='" + nom + '\'' +
+                ", password='" + password + '\'' +
+                ", role=" + role +
+                ", telephone='" + telephone + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", analyses=" + analyses +
+                '}';
+    }
+
+    public Utilisateur(String nom, String password, Role role, String telephone, String adresse, List<Analyse> analyse) {
+        this.nom = nom;
+        this.password = password;
+        this.role = role;
+        this.telephone = telephone;
+        this.adresse = adresse;
+        this.analyses = analyse;
+    }
 }

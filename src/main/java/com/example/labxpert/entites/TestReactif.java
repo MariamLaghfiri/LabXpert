@@ -16,4 +16,19 @@ public class TestReactif {
     @ManyToOne
     private Reactif reactif;
     private Double quantity;
+
+    @Override
+    public String toString() {
+        return "TestReactif{" +
+                "test=" + test +
+                ", reactif=" + reactif +
+                ", quantity=" + quantity +
+                '}';
+    }
+
+    public TestReactif(Test test, Reactif reactif, Double quantity) {
+        this.test = test;
+        this.reactif = reactif;
+        this.quantity = quantity;
+    }
 }
