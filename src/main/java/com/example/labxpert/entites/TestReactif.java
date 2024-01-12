@@ -1,20 +1,18 @@
 package com.example.labxpert.entites;
 
-import com.example.labxpert.entites.Enum.Role;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "analyse_reactif")
-public class AnalyseReactif {
-
+@Table(name = "test_reactif")
+public class TestReactif {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private Analyse analyse;
+    private Test test;
     @ManyToOne
     private Reactif reactif;
     private Double quantity;

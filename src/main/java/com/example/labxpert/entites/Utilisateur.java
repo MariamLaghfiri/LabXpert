@@ -25,7 +25,4 @@ public class Utilisateur {
     private String adresse;
     @OneToMany(mappedBy = "utilisateur")
     private List<Analyse> analyses;
-    @OneToMany(mappedBy = "utilisateur")
-    private List<Planification> planification;
-
 }

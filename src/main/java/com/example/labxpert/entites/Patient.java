@@ -26,7 +26,6 @@ public class Patient {
     private String adresse;
     @OneToMany(mappedBy = "patient")
     private List<Analyse> historique_analyses;
-
     @OneToMany(mappedBy = "patient")
     private List<Echantillon> echantillons;
 }

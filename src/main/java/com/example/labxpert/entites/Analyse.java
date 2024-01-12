@@ -17,15 +17,11 @@ public class Analyse {
     private LocalDateTime date_fin_analyse;
     private String commentaires;
     @ManyToOne
-    private Echantillon echantillon;
-    @ManyToOne
     private Utilisateur utilisateur;
     @ManyToOne
-    private Planification planification;
-    @OneToOne
-    private Resultat resultat;
-    @ManyToOne
     private Patient patient;
+    @ManyToOne
+    private AnalysePre analysePre;
     @OneToMany(mappedBy = "analyse")
-    private List<AnalyseReactif> analyse_reactifs;
+    private List<Test> test;
 }

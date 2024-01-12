@@ -8,11 +8,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "rapport_statique")
 public class RapportStatique {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String type;
     private String periode_rapport;
-    //private String donnees_statiques;
 }

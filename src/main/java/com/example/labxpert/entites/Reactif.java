@@ -1,6 +1,5 @@
 package com.example.labxpert.entites;
 
-import com.example.labxpert.entites.Enum.Role;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -21,5 +20,5 @@ public class Reactif {
     private Date date_expiration;
     private String fournisseur;
     @OneToMany(mappedBy = "reactif")
-    private List<AnalyseReactif> analyse_reactifs;
+    private List<TestReactif> testReactif;
 }

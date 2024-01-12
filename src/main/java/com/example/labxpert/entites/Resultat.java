@@ -13,7 +13,7 @@ public class Resultat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToOne
-    private Analyse analyse;
+    private Test test;
     private Double valeur;
     private String unite_mesure;
     @Enumerated(EnumType.STRING)
